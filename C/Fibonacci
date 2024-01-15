@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int fibo(int x){
+    if(x < 2){
+        return x;
+    }
+    return fibo(x-1) + fibo(x-2);
+
+}
+int main(void){
+    int n, valor;
+    scanf("%d", &n);
+
+    valor = fibo(n);
+    printf("%d", valor);
+
+    return 0;
+
+}

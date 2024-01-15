@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void)
+{
+    int vacalos[50] = {0};
+    int baias[15] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47};
+
+    for(int i = 0; i < 15; i++)
+    {
+        vacalos[baias[i]] = 1;
+    }
+
+    int contador = 0; 
+    int max = 0; 
+    int indicador;
+
+    for(int i = 0; i < 50 - 20; i++){
+        contador = 0;
+        for(int j = i; j < 20 + i; j++){
+            if(vacalos[j]){
+                contador = contador + 1;
+            }
+        }
+        if(contador > max){
+            max = contador;
+            indicador = i;
+        }
+
+    }
+    printf("Maior = %d inicio %d", max, indicador);
+}

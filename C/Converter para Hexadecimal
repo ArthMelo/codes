@@ -1,0 +1,43 @@
+#include<stdio.h>
+int main(void){
+    int entrada, i = 0;
+    scanf("%d", &entrada);
+    char binario[i];
+    while(entrada != 0){
+        
+        i++;
+        binario[i] = entrada%16;
+            if (binario[i] == 10){
+                binario[i] = 'A';
+            }
+            if (binario[i] == 11){
+                binario[i] = 'B';
+            }
+            if (binario[i] == 12){
+                binario[i] = 'C';
+            }
+            if (binario[i] == 13){
+                binario[i] = 'D';
+            }
+            if (binario[i] == 14){
+                binario[i] = 'E';
+            }
+            if (binario[i] == 15){
+                binario[i] = 'F';
+            }
+
+            entrada /= 16;
+
+
+    }
+
+    for (int j = i; j > 0; j--){
+        if (binario[j] >= 65 && binario[j] <= 90){
+            printf("%c", binario[j]);
+        } else {
+            printf("%d", binario[j]);
+        }
+
+    }
+    return 0;
+}

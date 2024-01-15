@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+    int x, i = 1, j = 1, soma = 0;
+    scanf("%d", &x);
+
+    while (i<x){
+  
+    {
+          if (i%2==0)
+        soma = soma + i;
+        i = i + j;
+        j = i - j;
+      }
+    }
+    printf("%d", soma);
+    return 0;
+    
+}

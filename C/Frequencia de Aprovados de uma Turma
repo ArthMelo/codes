@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+    //n == numero de alunos;
+    int n; 
+    scanf("%d", &n);
+    int notas[n], i, aprovados = 0;
+
+    for(i = 1; i <= n; i++){
+        scanf("%d", &notas[i]);
+        if(notas[i] >= 0 && notas[i] <= 10){
+            if(notas[i] >= 5){
+                aprovados = aprovados + 1;
+            }
+        }
+    }
+    printf("%d", aprovados);
+    return 0;
+}

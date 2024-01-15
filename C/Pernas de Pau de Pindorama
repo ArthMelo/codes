@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<string.h>
+
+int main(void)
+{
+   
+    FILE *pa;
+    pa = fopen("resultados.txt", "r");
+
+     int ano, pontos, melhor_ano, max = 0;
+    char jogos[51];
+
+    if(pa == NULL)
+    {
+        printf("Impossivel processar");
+    }
+
+    while(fscanf(pa, "%d %s", &ano, jogos)!=EOF)
+    {
+            pontos = 0;
+            for(int i = 0; jogos[i] != '\0'; i++)
+            {
+            if(jogos[i] == 'V' || jogos[i] == 'v'){
+            pontos = pontos + 3;
+            }
+            if(jogos[i] == 'E' || jogos[i] == 'e'){
+            pontos = pontos + 1;
+            }
+    }
+    if(pontos > max)
+    {
+            max = pontos;
+            melhor_ano = ano;
+
+        }
+        printf("O time fez %d pontos em %d\n", pontos, ano);
+    }
+    
+
+    printf("Melhor ano: %d; pontos: %d",max, melhor_ano);
+
+    fclose(pa);
+    return 0;
+}

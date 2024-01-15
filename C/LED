@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<string.h>
+int main(void){
+    int somatorio = 0, n;
+    scanf("%d", &n);
+
+for (int j = 0; j < n; j++){
+    char entradas[j];
+    scanf("%s", entradas);
+    int t = strlen(entradas);
+
+    for (int i = 0; i < t ; i++){
+        if (entradas[i] == '1'){
+            somatorio = somatorio + 2;
+        } 
+        if (entradas[i] == '2' || entradas[i] == '3' || entradas[i] == '5'){
+            somatorio = somatorio + 5;
+
+        }
+        if (entradas[i] == '4'){
+            somatorio = somatorio + 4;
+        }
+        if (entradas[i] == '6' || entradas[i] == '9' || entradas[i] == '0'){
+            somatorio = somatorio + 6;
+        }
+        if (entradas[i] == '7'){
+            somatorio = somatorio + 3;
+        }
+        if (entradas[i] == '8'){
+            somatorio = somatorio + 7;
+        }
+    
+    }
+    printf("%d leds\n", somatorio);
+    somatorio = 0;
+}
+    return 0;
+}

@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+long long ope(long long phi, long long n){
+    long long b = ((n+1) - phi)/2;
+
+    if (b*b < phi){
+        return ope(phi-2, n);
+    } else {
+        
+        int p = b + sqrt(b*b-n);
+
+        return phi;
+    }
+}
+
+int main(){
+    long long n;
+    scanf("%lld", &n);
+
+    long long phi = n-3;
+
+    long long p = ope(phi, n);
+    long long q = n/p;
+
+    printf("%lld, %lld, %lld", p, q, n);
+    return 0;
+
+    
+
+    
+}

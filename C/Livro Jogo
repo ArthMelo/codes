@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<string.h>
+
+typedef struct PERSONAGEM_
+{
+    int vida;
+    int lealdade;
+    int defesa;
+    int itens[3];
+} personagem;
+
+void inicio()
+{
+    char texto[2000];
+        FILE *arquivo;
+        arquivo = fopen("ini.txt","r");
+
+        if(arquivo == NULL){
+        printf("Impossivel rodar");
+    }
+
+    while(fscanf(arquivo, "%s", texto) != EOF){
+        printf("%s ", texto);
+    }
+    fclose(arquivo);
+}
+
+void comecar()
+{
+    int i;
+
+    printf("Aperte [1] para começar um novo jogo\nAperte [2] para recomeçar um jogo\nAperte [3] para sair\n");
+    scanf("%d", &i);
+
+    if(i == 2){
+        printf("Não vai começar não kkkk\n");
+    }
+    if(i == 1){
+        inicio();
+    } else {
+        return;
+    }
+
+}
+
+int main(void)
+{
+    comecar();
+    
+}

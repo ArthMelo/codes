@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<string.h>
+int main(void){
+    char palavra[201];
+    scanf("%s", palavra);
+    int t;
+    t = strlen(palavra);
+
+    if (palavra[0] >= 97 && palavra[0] <= 122){
+            palavra[0] = palavra[0] - 32;
+        }
+
+    for(int i = 1; i < t; i++){
+        if (palavra[i] >= 65 && palavra[i] <= 90){
+            palavra[i] += 32;
+        }
+    }
+
+    printf("%s", palavra);
+    return 0;
+
+    
+}

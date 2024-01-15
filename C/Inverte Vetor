@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(void){
+    int n, j;
+    scanf("%d", &n);
+    int vetor[n];
+    int i;
+
+    for(i = 0; i < n; i++){ 
+        scanf("%d", &vetor[i]);
+    }
+
+    for(j = n - 1; j >= 0; j--){ 
+        printf("%d ", vetor[j]);
+    }
+}

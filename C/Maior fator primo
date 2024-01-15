@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+    int numero, i = 2;
+    long long int valor = 600851475143;
+
+    while (valor != 1){
+       while (valor% i == 0){
+        valor /= i;
+       }
+       i++;
+    }
+    printf("%d", i - 1);
+    return 0;
+}

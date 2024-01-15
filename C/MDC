@@ -1,0 +1,21 @@
+#include<stdio.h>
+int mdc(int m, int n)
+{
+    if (n == 0)
+    {
+        return m;
+    }
+    return mdc(n, m%n);
+}
+
+int main(void)
+{
+    int x, y, resposta;
+    printf("Digite dois numeros\n");
+    scanf("%d %d", &x, &y);
+
+    resposta = mdc(x, y);
+
+    printf("O MDC eh %d", resposta);
+    return 0;
+}

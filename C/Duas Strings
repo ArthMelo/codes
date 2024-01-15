@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<string.h>
+
+int strend(char s[], char t[])
+{
+    char texto[100];
+    int n = strlen(s);
+    int m = strlen(t);
+
+    for(int i = n; i >= 0; i--){
+        for(int j = m; j >= 0; j--){
+            if(t[j] == s[i]){
+                texto[j] = t[j];
+
+            }
+        }
+    }
+    int h = strlen(texto);
+
+    if(h == m){
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int main(void)
+{
+    int resposta;
+    char s[101], t[101];
+    scanf("%s %s", s, t);
+
+    resposta = strend(s, t);
+
+    if(resposta == 1){
+        printf("%s aparece no fim de %s", t, s);
+    }
+    if(resposta == 0){
+        printf("%s nao aparece no fim de %s", t, s);
+    }
+
+
+}

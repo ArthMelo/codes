@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<string.h>
+int main(void){
+    char nome[201];
+    scanf("%s", &nome);
+    int tamanho, i;
+    tamanho = strlen(nome);
+
+    for(i = 0; i < tamanho; i++){
+        if(nome[i] >= 65 && nome[i] <= 90){
+        nome[i] += 32;
+        }
+    }
+    printf("%s", nome);
+    return 0;
+}
