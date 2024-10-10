@@ -33,7 +33,8 @@ public class Cliente {
 	}
 	public int meuEngajamento(){ return engajamento; }
 	public double meuDesconto(){ return desconto; }
-	private void setDesconto(){
-	//Implementar!
+	private void setDesconto(double desconto){
+		this.desconto = desconto;
 	}
+
 }
