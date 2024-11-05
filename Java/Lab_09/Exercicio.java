@@ -1,4 +1,4 @@
-package ronaldete;
+package Lab_09;
 
 public class Exercicio {
     public static void metodo1() {

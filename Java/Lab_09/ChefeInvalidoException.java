@@ -1,6 +1,6 @@
-package ronaldete;
+package Lab_09;
 
-public class ChefeInvalidoException extends RuntimeException {
+public class ChefeInvalidoException extends Exception {
     public ChefeInvalidoException(){
         super("Chefe Invalido");
     }
